@@ -62,9 +62,12 @@
     
     # Method
     def another_map
-      #use another_each
+      num_array = []
+      self.another_each do |i|
+        num_array << yield(i)
+      end
+      num_array
     end
-
   end
 
   # Exercise 2 Driver Code
